@@ -461,7 +461,7 @@ ${displayHtml}
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>king</h2>
+                <h2>Club_Gratis</h2>
 		<a href="#" Back</a>
                 <p>${noteshow}</p>
                 <hr>

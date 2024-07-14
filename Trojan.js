@@ -1,8 +1,8 @@
 // src/worker.js
 import { connect } from "cloudflare:sockets";
 
-let Pswd = "club_gratis";
-const proxyIPs = ["cdn.xn--b6gac.eu.org"];
+let Pswd = "club";
+const proxyIPs = ["35.219.50.99"];
 let hostnames = [''];
 
 let sha224Password;
@@ -374,8 +374,8 @@ export { worker_default as default };
 
 //# sourceMappingURL=worker.js.map
 function gettrojanConfig(Pswd, hostName) {
-  const ptrojanwstls = `trojan://${Pswd}\u0040www.visa.com.sg:8443?security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=/trojancf#${hostName}`;
-  const ptrojanwstls = `trojan://${Pswd}\u0040www.visa.com.sg:8443?security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=/trojancf#${hostName}`;
+  const ptrojanwstls = `trojan://${Pswd}\u0040www.visa.com.sg:443?security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=/trojancf#${hostName}`;
+  const wtrojanws = `trojan://${Pswd}\u0040www.visa.com.sg:80?security=none&type=ws&host=${hostName}&path=/trojancf#${hostName}`;
   const note = `ProxyIP：${proxyIP}`;
   const noteshow = note.replace(/\n/g, '<br>');
   const displayHtml = `
@@ -418,36 +418,36 @@ ${displayHtml}
         <hr>
         <br>
         <br>
-        <h3>CF-pages-trojan+ws+tls</h3>
+        <h3>Trojan TLS</h3>
         <table class="table">
           <thead>
             <tr>
-              <th>节点类型</th>
-              <th>分享链接</th>
-              <th>复制</th>
+              <th>satu</th>
+              <th>dua</th>
+              <th>tiga</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="limited-width">CF-pages-trojan+ws+tls</td>
+              <td class="limited-width">TLS</td>
               <td class="limited-width">${ptrojanwstls}</td>
               <td><button class="btn btn-primary" onclick="copyToClipboard('${ptrojanwstls}')">Copy Cuy</button></td>
             </tr>
           </tbody>
         </table>
         <hr>
-        <p>注意：如果 ${hostName} 在本地网络打不开（中国移动用户注意），客户端必须开启切片功能</p>
+        <p>tes ${hostName} </p>
         <hr>
-        <h3>客户端必要文明参数如下：</h3>
+        <h3>mr_kings</h3>
         <ul>
-          <li>客户端地址(address)：自定义的域名 或者 优选域名 或者 优选IP（反代IP必须与反代端口对应）</li>
-          <li>端口(port)：6个https端口可任意选择(443、8443、2053、2083、2087、2096)</li>
-          <li>密码：${Pswd}</li>
-          <li>传输协议(network)：ws 或者 websocket</li>
-          <li>伪装域名(host)：${hostName}</li>
-          <li>路径(path)：/trojancf</li>
-          <li>传输安全(TLS)：开启</li>
-          <li>跳过证书验证(allowlnsecure)：false</li>
+          <li>(address)：bug</li>
+          <li>(port)：(443、8443、2053、2083、2087、2096)</li>
+          <li>(password)：${Pswd}</li>
+          <li>(network)：ws websocket</li>
+          <li>(host)：${hostName}</li>
+          <li>(path)：/trojancf</li>
+          <li>(TLS)：sni</li>
+          <li>(allowlnsecure)：false</li>
         </ul>
       </div>
     </div>
@@ -464,68 +464,68 @@ ${displayHtml}
                 <h2>king</h2>
                 <p>${noteshow}</p>
                 <hr>
-                <h3>1：CF-workers-trojan+ws</h3>
+                <h3>1：Trojan TLS </h3>
           <table class="table">
             <thead>
               <tr>
-                <th>节点类型</th>
-                <th>分享链接</th>
-                <th>复制</th>
+                <th>satu</th>
+                <th>dua</th>
+                <th>tiga</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="limited-width">CF-workers-trojan+ws</td>
-                <td class="limited-width">${wtrojanws}</td>
-                <td><button class="btn btn-primary" onclick="copyToClipboard('${wtrojanws}')">copy cuy</button></td>
+                <td class="limited-width">TLS</td>
+                <td class="limited-width">${ptrojanwstls}</td>
+                <td><button class="btn btn-primary" onclick="copyToClipboard('${ptrojanwstls}')">copy 443</button></td>
               </tr>
             </tbody>
           </table>
           <hr>
-          <p>注意：当前节点无需使用CF解析完成的域名，客户端选项的TLS选项必须关闭</p>
+          <p>Trojan Cf Tls</p>
                 <hr>
-                <h3>客户端必要文明参数如下：</h3>
+                <h3>Info：</h3>
                 <ul>
-                    <li>客户端地址(address)：自定义的域名 或者 优选域名 或者 优选IP（反代IP必须与反代端口对应）</li>
-                    <li>端口(port)：7个http端口可任意选择(80、8080、8880、2052、2082、2086、2095)</li>
-                    <li>密码：${Pswd}</li>
-                    <li>传输协议(network)：ws 或者 websocket</li>
-                    <li>伪装域名(host)：${hostName}</li>
-                    <li>路径(path)：/trojancf</li>
+                    <li>(address)：${hostName}</li>
+                    <li>(port)：(443、8443、2053、2083、2087、2096)</li>
+                    <li>(password)：${Pswd}</li>
+                    <li>(network)：ws websocket</li>
+                    <li>(host)：${hostName}</li>
+                    <li>(path)：/trojancf</li>
                 </ul>
                 <hr>
                 <br>
                 <br>
-                <h3>2：CF-workers-trojan+ws+tls</h3>
+                <h3>2：Trojan NTLS</h3>
           <table class="table">
             <thead>
               <tr>
-                <th>节点类型</th>
-                <th>分享链接</th>
-                <th>复制</th>
+                <th>satu</th>
+                <th>dua</th>
+                <th>tiga</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="limited-width">CF-workers-trojan+ws+tls</td>
-                <td class="limited-width">${ptrojanwstls}</td>	
-                <td><button class="btn btn-primary" onclick="copyToClipboard('${ptrojanwstls}')">copy</button></td>
+                <td class="limited-width">NTLS</td>
+                <td class="limited-width">${wtrojanws}</td>	
+                <td><button class="btn btn-primary" onclick="copyToClipboard('${wtrojanws}')">copy 80</button></td>
               </tr>
             </tbody>
           </table>
           <hr>
-          <p>注意：使用workers域名开启TLS，客户端必须开启切片功能</p>
+          <p>Trojan Cf Ntls</p>
                 <hr>
-                <h3>客户端必要文明参数如下：</h3>
+                <h3>Info：</h3>
                 <ul>
-                    <li>客户端地址(address)：自定义的域名 或者 优选域名 或者 优选IP（反代IP必须与反代端口对应）</li>
-                    <li>端口(port)：6个https端口可任意选择(443、8443、2053、2083、2087、2096)</li>
-                    <li>密码：${Pswd}</li>
-                    <li>传输协议(network)：ws 或者 websocket</li>
-                    <li>伪装域名(host)：${hostName}</li>
-                    <li>路径(path)：/?ed=2560</li>
-                    <li>传输安全(TLS)：开启</li>
-                    <li>跳过证书验证(allowlnsecure)：false</li>
+                    <li>(address)：${hostName}</li>
+                    <li>(port)：(80、8080、8880、2052、2082、2086、2095)</li>
+                    <li>(password)：${Pswd}</li>
+                    <li>(network)：ws websocket</li>
+                    <li>(host)：${hostName}</li>
+                    <li>(path)：/?ed=2560</li>
+                    <li>(TLS)：none</li>
+                    <li>(allowlnsecure)：false</li>
                 </ul>
             </div>
         </div>

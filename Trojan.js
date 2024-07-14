@@ -374,8 +374,8 @@ export { worker_default as default };
 
 //# sourceMappingURL=worker.js.map
 function gettrojanConfig(Pswd, hostName) {
-  const ptrojanwstls = `trojan://${Pswd}\u0040www.visa.com.sg:443?security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=/trojancf#Trojan Tls`;
-  const wtrojanws = `trojan://${Pswd}\u0040www.visa.com.sg:80?security=none&type=ws&host=${hostName}&path=/trojancf#Trojan Ntls`;
+  const ptrojanwstls = `trojan://${Pswd}\u0040${hostName}:443?security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=/trojancf#Trojan Tls`;
+  const wtrojanws = `trojan://${Pswd}\u0040${hostName}:80?security=none&type=ws&host=${hostName}&path=/trojancf#Trojan Ntls`;
   const note = `ProxyIP：${proxyIP}`;
   const noteshow = note.replace(/\n/g, '<br>');
   const displayHtml = `

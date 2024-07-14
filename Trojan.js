@@ -1,8 +1,8 @@
 // src/worker.js
 import { connect } from "cloudflare:sockets";
 
-let Pswd = "";
-const proxyIPs = [""];
+let Pswd = "Club_Gratis";
+const proxyIPs = ["35.219.50.99"];
 let hostnames = [''];
 
 let sha224Password;
@@ -462,14 +462,12 @@ ${displayHtml}
         <div class="row">
             <div class="col-md-12">
                 <h2>Club_Gratis</h2>
-		<a href="#" Back</a>
+		<p><b><a href="default.asp" target="_blank"> Back </a></b></p>
                 <p>${noteshow}</p>
                 <hr>
                 <h3>1：Trojan TLS </h3>
           <table class="table">
             <thead>
-              <tr>
-              </tr>
             </thead>
             <tbody>
               <tr>
@@ -479,7 +477,6 @@ ${displayHtml}
             </tbody>
           </table>
           <hr>
-          <p>Trojan Cf Tls</p>
                 <hr>
                 <h3>Info：</h3>
                 <ul>
@@ -498,8 +495,6 @@ ${displayHtml}
                 <h3>2：Trojan NTLS</h3>
           <table class="table">
             <thead>
-              <tr>
-              </tr>
             </thead>
             <tbody>
               <tr>
@@ -509,7 +504,6 @@ ${displayHtml}
             </tbody>
           </table>
           <hr>
-          <p>Trojan Cf Ntls</p>
                 <hr>
                 <h3>Info：</h3>
                 <ul>

@@ -1,8 +1,8 @@
 // src/worker.js
 import { connect } from "cloudflare:sockets";
 
-let Pswd = "club";
-const proxyIPs = ["35.219.50.99"];
+let Pswd = "";
+const proxyIPs = [""];
 let hostnames = [''];
 
 let sha224Password;
@@ -374,8 +374,8 @@ export { worker_default as default };
 
 //# sourceMappingURL=worker.js.map
 function gettrojanConfig(Pswd, hostName) {
-  const ptrojanwstls = `trojan://${Pswd}\u0040www.visa.com.sg:443?security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=/trojancf#${hostName}`;
-  const wtrojanws = `trojan://${Pswd}\u0040www.visa.com.sg:80?security=none&type=ws&host=${hostName}&path=/trojancf#${hostName}`;
+  const ptrojanwstls = `trojan://${Pswd}\u0040www.visa.com.sg:443?security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=/trojancf#Trojan Tls`;
+  const wtrojanws = `trojan://${Pswd}\u0040www.visa.com.sg:80?security=none&type=ws&host=${hostName}&path=/trojancf#Trojan Ntls`;
   const note = `ProxyIP：${proxyIP}`;
   const noteshow = note.replace(/\n/g, '<br>');
   const displayHtml = `
@@ -402,7 +402,7 @@ function copyToClipboard(text) {
   input.select();
   document.execCommand('Copy');
   document.body.removeChild(input);
-  alert('已复制到剪贴板');
+  alert('Disalin');
 }
 </script>
 	`;
@@ -462,20 +462,17 @@ ${displayHtml}
         <div class="row">
             <div class="col-md-12">
                 <h2>king</h2>
+		<a href="#" Back</a>
                 <p>${noteshow}</p>
                 <hr>
                 <h3>1：Trojan TLS </h3>
           <table class="table">
             <thead>
               <tr>
-                <th>satu</th>
-                <th>dua</th>
-                <th>tiga</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="limited-width">TLS</td>
                 <td class="limited-width">${ptrojanwstls}</td>
                 <td><button class="btn btn-primary" onclick="copyToClipboard('${ptrojanwstls}')">copy 443</button></td>
               </tr>
@@ -492,6 +489,8 @@ ${displayHtml}
                     <li>(network)：ws websocket</li>
                     <li>(host)：${hostName}</li>
                     <li>(path)：/trojancf</li>
+                    <li>(TLS)：sni</li>
+                    <li>(allowlnsecure)：true/false</li>
                 </ul>
                 <hr>
                 <br>
@@ -500,14 +499,10 @@ ${displayHtml}
           <table class="table">
             <thead>
               <tr>
-                <th>satu</th>
-                <th>dua</th>
-                <th>tiga</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="limited-width">NTLS</td>
                 <td class="limited-width">${wtrojanws}</td>	
                 <td><button class="btn btn-primary" onclick="copyToClipboard('${wtrojanws}')">copy 80</button></td>
               </tr>
@@ -523,9 +518,9 @@ ${displayHtml}
                     <li>(password)：${Pswd}</li>
                     <li>(network)：ws websocket</li>
                     <li>(host)：${hostName}</li>
-                    <li>(path)：/?ed=2560</li>
+                    <li>(path)：/trojancf</li>
                     <li>(TLS)：none</li>
-                    <li>(allowlnsecure)：false</li>
+                    <li>(allowlnsecure)：true/false</li>
                 </ul>
             </div>
         </div>

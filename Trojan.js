@@ -467,8 +467,6 @@ ${displayHtml}
                 <hr>
                 <h3>1：Trojan TLS </h3>
           <table class="table">
-            <thead>
-            </thead>
             <tbody>
               <tr>
                 <td class="limited-width">${ptrojanwstls}</td>
@@ -476,8 +474,6 @@ ${displayHtml}
               </tr>
             </tbody>
           </table>
-          <hr>
-                <hr>
                 <h3>Info：</h3>
                 <ul>
                     <li>(address)：${hostName}</li>
@@ -494,8 +490,6 @@ ${displayHtml}
                 <br>
                 <h3>2：Trojan NTLS</h3>
           <table class="table">
-            <thead>
-            </thead>
             <tbody>
               <tr>
                 <td class="limited-width">${wtrojanws}</td>	
@@ -503,8 +497,6 @@ ${displayHtml}
               </tr>
             </tbody>
           </table>
-          <hr>
-                <hr>
                 <h3>Info：</h3>
                 <ul>
                     <li>(address)：${hostName}</li>
